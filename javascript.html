@@ -1,0 +1,17 @@
+<script>
+window.addEventListener('load', function() {
+  loadScriptSettings();
+});
+
+function loadScriptSettings(){
+  var settings = google.script.run.withSuccessHandler(function(settings){
+    document.getElementById('fieldFontSize').value = settings.fontSize;
+  }).loadSettings();
+}
+
+function doSaveSettings(){
+  google.script.run.withSuccessHandler(function(t){
+    google.script.host.close();
+  }).saveSettings({fontSize:document.getElementById('fieldFontSize').value});
+}
+</script>

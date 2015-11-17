@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="stylesheet" href="https://ssl.gstatic.com/docs/script/css/add-ons1.css">
+    <base target="_top">
+    <?!= include('stylesheet.html'); ?>
+  </head>
+  <body>
+  <div class="block">
+  <div class="inline form-group">
+    <label for="fieldFontSize">Font size:</label>
+    <input id="fieldFontSize" type="text" name="fontsize" size="2"/>
+  </div>
+  </div>
+  
+  <div class="block">
+    <input type="button" onclick="doSaveSettings();" class="action" value="Save settings" />
+    <input type="button" value="Close" onclick="google.script.host.close()" />
+  </div>
+  <?!= include('javascript.html'); ?>
+  </body>
+</html>
+
+
